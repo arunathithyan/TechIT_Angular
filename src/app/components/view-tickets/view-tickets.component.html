@@ -1,0 +1,69 @@
+<app-header></app-header>
+<div>
+    <table class="table table-bordered table-hover"> 
+          <thead>
+          <tr>
+            <th scope="col">Ticket Number</th>
+            <th scope="col">Requester Name</th>
+            <th scope="col">Summary</th>
+            <th scope="col">Date Submitted</th>
+            <th scope="col">Last Updated</th>
+            <th scope="col">Status</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Details</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let entry of entries">
+           
+            <td><a  (click)="detailEntry(entry._id)">{{entry._id}}</a></td>
+            
+            <td>{{entry.createdForName}}</td>
+            <td>{{entry.subject}}</td>
+            <td>{{entry.startDate}}</td>
+            <td>{{entry.lastUpdated}}</td>
+            <td>{{entry.status}}</td>
+            <td>{{entry.priority}}</td>
+            <td>{{entry.details}}</td>
+           
+
+            
+           
+          </tr>
+          </tbody>
+    </table>
+
+    <nav class="my-4">
+        <ul class="pagination pagination-circle pg-blue mb-0">
+
+
+            <li class="page-item disabled"><a class="page-link">First</a></li>
+
+
+            <li class="page-item disabled">
+                <a class="page-link" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+            </li>
+
+
+            <li class="page-item active"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+            <li class="page-item"><a class="page-link">4</a></li>
+            <li class="page-item"><a class="page-link">5</a></li>
+        
+            <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+            </li>
+            <li class="page-item"><a class="page-link">Last</a></li>
+
+        </ul>
+    </nav>
+    
+    <button class="btn btn-primary" (click)="createEntry()">Click to Create Ticket</button>  
+  </div>

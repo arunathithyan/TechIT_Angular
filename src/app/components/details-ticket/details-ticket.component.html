@@ -1,0 +1,82 @@
+<app-header></app-header>
+<div class="col-lg-9 col-md-9">
+   
+    <div class="tab-content">
+        <div id="Summery" class="tab-pane fade in active">
+
+            <div class="table-responsive panel">
+                <table class="table">
+                    <tbody>
+
+                            <tr>
+                                <td > Ticket ID</td>
+                                <td>{{entrie._id}}</td>
+                            </tr>
+                            <tr>
+                                <td > Progress</td>
+                                <td>{{entrie.status}}</td>
+                            </tr>
+                            <tr>
+                                <td > Requester</td>
+                                <td>{{entrie.CreateForName}}
+                                <table align="center">
+                                  <tr>
+                                    <th>Phone</th> <td>{{entrie.phone}}</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Email</th> <td>{{entrie.createdForEmail}}</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Date Submitted</th> <td>{{entrie.startDate}}</td>
+                                  </tr>
+                                
+                                  <tr>
+                                    <th>Department</th> <td>{{entrie.department}}</td>
+                                  </tr>
+                                  
+                                  </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td > Location of Problem</td>
+                                <td>{{entrie.ticketLocation}}</td>
+                            </tr>
+                            <tr>
+                                <td > Priority</td>
+                                <td>{{entrie.priority}}</td>
+
+                            </tr>
+                            <tr>
+                                <td > Subject</td>
+                                <td> {{entrie.subject}} </td>
+                            </tr>
+                            
+                          
+
+                          <tr>
+                              <td > Details</td>
+                              <td> {{entrie.details}}</td>
+                          </tr>
+
+
+                    </tbody>
+                </table>
+
+  <table border="1">
+  <tr><th>Update Date</th><th>Details</th> </tr>
+  <tr *ngFor="let en of entrie.updates"></tr>
+  <tr><td>{{en}}</td><td></td> </tr>
+  <tr><td></td><td></td> </tr>
+
+
+  
+</table>
+                
+<button class="btn btn-primary" (click)="backHome()">Back To Home</button>
+                
+            </div>
+        </div>
+      </div>
+    </div>
+
+        

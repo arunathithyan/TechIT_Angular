@@ -1,0 +1,86 @@
+<app-header></app-header>
+<div class="container">
+
+  <form>
+  <div class="col-xs-5">
+  <label for="FirstName">First Name:</label>
+  <input class="form-control" id="firstName"  type="text" [(ngModel)]="entry.createdForName" name="createdForName">
+  </div>
+    
+  <div class="col-xs-5">
+      <label for="lastName">Last Name:</label>
+      <input  class="form-control" id="lastName" type="text" [(ngModel)]="entry.lname" name="lname">
+  </div>
+  
+  <br>     
+  <br>
+  <br>
+  <br>
+      <div class="col-xs-5">
+          <label for="ema">Email:</label>
+          <input class="form-control" id="ema" type="email" [(ngModel)]="entry.createdForEmail" name="createdForEmail">
+      </div>
+        
+      <div class="col-xs-5">
+            <label for="ph">Phone Number:</label>
+             <input class="form-control" id="ph" type="text" [(ngModel)]="entry.email" name="phone">
+      </div>
+
+  <br>
+  <br>
+  <br>
+  <br>     
+
+ <div class="col-xs-5">
+      <label for="dep">Department:</label>
+      <select name="department" [(ngModel)]="entry.department" class="form-control" id="dep">
+        <option>Computer Science</option>
+        <option>Civil Engineering</option>
+        <option>Electrical and Computer Engineering</option>
+        <option>Mechanical Engineering</option>
+        <option>Technology</option>
+      </select>
+  </div>
+        
+  <div class="col-xs-5">
+      <label for="un">Units:</label>
+      <select name="unit" [(ngModel)]="entry.unit" class="form-control" id="un">
+        <option>Techops</option>
+        <option>Computer</option>
+      </select>
+  </div>
+
+  <br> <br>
+  <br>    
+  <br>
+  
+        <div class="col-xs-5">
+              <label for="lo">Location Of Problem:</label>
+               <input class="form-control" id="lo"  type="text" [(ngModel)]="entry.ticketLocation" name="ticketLocation">
+          </div>
+        
+          <div class="col-xs-5">
+              <label for="sub">Subject:</label>
+             <input class="form-control" id="sub" type="text" [(ngModel)]="entry.subject" name="subject">
+           </div>
+
+           <br>     
+           <br>     
+           <br>
+           <br>
+          <div class="col-xs-10">
+              <label for="det">Details</label>
+              <textarea class="form-control" rows="5" id="det" [(ngModel)]="entry.details" name="details"></textarea>
+           </div>
+           
+           <div>
+              <button class="btn btn-primary"  (click)="addEntry()">Create</button>
+            </div>
+          
+          <br>
+          
+          <div>
+              <button class="btn btn-primary" (click)="cancelEntry()">Cancel</button>
+           </div>
+ </form>
+</div>
